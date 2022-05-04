@@ -2654,13 +2654,12 @@ const drawPath = (ctx, points, closePath) => {
   if (closePath) {
     region.closePath();
   }
-  ctx.strokeStyle = "pink";
+  ctx.strokeStyle = "grey";
   ctx.stroke(region);
 };
 
 // Drawing Mesh
 export const drawMesh = (predictions, ctx) => {
-    //Recorrec cada prediccion para dibujar la malla
   if (predictions.length > 0) {
     predictions.forEach((prediction) => {
       const keypoints = prediction.scaledMesh;
